@@ -13,6 +13,10 @@ Window {
             console.log("This is Qml: callQml signal cought.")
             mText.text = parameter;
         }
+
+        onCppTimer: {
+            mRectText.text = value; //parameter name is value in the signal of the class
+        }
     }
 
     Column{

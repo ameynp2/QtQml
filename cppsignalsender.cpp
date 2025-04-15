@@ -1,8 +1,8 @@
 #include "cppsignalsender.h"
 
 cppSignalSender::cppSignalSender(QObject *parent) : QObject{parent},
-    QTimer{new QTimer(this)},
-    mValue{0}
+    mTimer (new QTimer(this)),
+    mValue(0)
 {
     connect(mTimer, &QTimer::timeout, [=](){
         ++mValue;
